@@ -103,31 +103,36 @@ button {
   #review-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 64px;
 
     .review-card {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      padding: 10px 10px;
-      border: 2px solid Gray;
+      padding: 25px;
       border-radius: 35px 4px;
-      background-color: #F7F7F7;
+      border: 3px solid #D5DDDD;
+      background: #F7F7F7;
 
       div {
-        display: grid;
-        grid-template-rows: repeat(2, max-content);
-        grid-template-columns: max-content 1fr;
-        grid-auto-flow: column;
+         display: flex;
+        flex-direction: row;
         gap: 10px 10px;
         img {
           grid-column: span 2;
           border-radius: 50%;
         }
+        .name-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+         }
       }
 
       .quotation-mark {
-        width: fit-content;
+
+        text-align: right;
         align-self: right;
         font-weight: 400;
         font-size: 100px;
@@ -137,6 +142,8 @@ button {
     .review-card.alt-color {
       border-color: #008080;
       background-color: #008080;
+      color: white;
     }
+
   }
 }
