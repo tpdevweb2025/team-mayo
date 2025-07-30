@@ -8,38 +8,62 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 160px;
+}
+
+section,
+header {
+  padding: 0 160px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 nav {
+  width: 100%;
+  max-width: 1080px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 25px;
-  menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    gap: 25px;
-  
-    a {
-      text-decoration: none;
-      color: black;
-    }
+
+  h3 {
+    font-size: 30px;
   }
 }
 
+menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  gap: 25px;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+#buttons {
+  display: flex;
+  gap: 10px;
+}
 
 .signIn {
-  background-color: none;
+  background-color: inherit;
   color: #008080;
+  padding: 12px 24px;
 }
 
 .green {
   background-color: #008080;
   color: white;
-  padding: 23px 38px;
+  padding: 12px 24px;
 }
 
 #hero {
@@ -71,11 +95,12 @@ button {
   display: flex;
   align-items: center;
   gap: 20px;
+  background: #f7f7f7;
 
   #services-image {
     width: 545px;
   }
-  
+
   h2 {
     font-size: 48px;
     font-weight: bold;
@@ -105,29 +130,26 @@ button {
     grid-template-columns: repeat(3, 1fr);
     gap: 64px;
 
-   > p{
+    > p {
       width: 679px;
-
-   }
+    }
     .review-card {
       display: flex;
       flex-direction: column;
       gap: 50px;
       padding: 25px;
       border-radius: 35px 4px;
-      border: 3px solid #D5DDDD;
-      background: #F7F7F7;
-      height: 403px;
+      border: 3px solid #d5dddd;
+      background: #f7f7f7;
 
-      p{
-         font-size: 20px;
-         font-weight: 500;
-         font-style: normal;
-         width: 679px;
+      p {
+        font-size: 20px;
+        font-weight: 500;
+        font-style: normal;
       }
 
       div {
-         display: flex;
+        display: flex;
         flex-direction: row;
         gap: 10px 10px;
         img {
@@ -135,19 +157,20 @@ button {
           border-radius: 50%;
         }
         .name-title {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
-         }
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: start;
+        }
       }
 
       .quotation-mark {
-
         text-align: right;
         align-self: right;
         font-weight: 400;
         font-size: 100px;
+        height: 67px;
+        color: #008080;
       }
     }
 
@@ -156,7 +179,9 @@ button {
       background-color: #008080;
       color: white;
 
+      .quotation-mark {
+        color: #eeeeee;
+      }
     }
-
   }
 }
