@@ -2,6 +2,7 @@
 @use "./base/reset" as *;
 @use "./variables/variables" as *;
 @use "./mixins/mixins" as *;
+@use "./responsive.scss" as *;
 
 body {
   display: flex;
@@ -69,12 +70,18 @@ menu {
 #hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+
   form {
     display: flex;
+    width: fit-content;
     gap: 21px;
+    background-color: #d5dddd;
 
     input {
-      background-color: #d5dddd;
+      border: none;
+      background-color: transparent;
     }
   }
 
@@ -96,34 +103,51 @@ button {
   align-items: center;
   gap: 20px;
   background: #f7f7f7;
+  padding: 30px 160px;
 
   #services-image {
     width: 545px;
   }
 
-  h2 {
-    font-size: 48px;
-    font-weight: bold;
-    color: #1e1e1e;
-  }
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
-  #services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    h2 {
+      font-size: 48px;
+      font-weight: bold;
+      color: #1e1e1e;
+    }
 
-    div {
-      display: flex;
-      gap: 10px;
-      align-items: center;
+    #services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 21px;
+
+      div {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+      }
+    }
+
+    button {
+      border: 3px solid #D5DDDD;
+      padding: 12px 24px;
+      width: fit-content;
     }
   }
+  
 }
 
 #reviews {
   display: flex;
   flex-direction: column;
   gap: 41px;
+  padding: 100px 60px;
 
   #review-cards {
     display: grid;
