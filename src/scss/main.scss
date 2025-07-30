@@ -1,0 +1,30 @@
+@use "./base/fonts" as *;
+@use "./base/reset" as *;
+@use "./variables/variables" as *;
+@use "./mixins/mixins" as *;
+
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+menu {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   list-style: none;
+
+   a {
+      text-decoration: none;
+      color: black;
+   }
+}
+
